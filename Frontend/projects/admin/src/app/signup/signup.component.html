@@ -1,0 +1,83 @@
+<body><div class="register">
+  <div class="panel">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-10">
+        <div class="card mt-3 mb-3 shadow-lg p-3 text-center" id="register">
+          <h3>Register</h3>
+          <hr>
+          <div [ngClass]="getClassName()" role="alert">
+            {{ message }}
+          </div>
+          <form [formGroup]="form" class="text-left">
+            <div class="form-group col-sm-10 col-xs-12 field">
+              <label>Name</label>
+              <label *ngIf="form.controls['name'].invalid && isProcessing">
+                <label *ngIf="form.controls['name'].errors['required']"
+                  >*</label
+                >
+              </label>
+              <input
+                type="text"
+                formControlName="name"
+                class="form-control"
+                placeholder="Enter your Full Name"
+              />
+            </div>
+            <div class="form-group col-sm-10 col-xs-12 field">
+              <label>Email</label>
+              <label *ngIf="form.controls['email'].invalid && isProcessing">
+                <label *ngIf="form.controls['email'].errors['required']"
+                  >*</label
+                >
+                <span *ngIf="form.controls['email'].errors['email']"></span>
+                <span>&nbsp; is invalid</span>
+              </label>
+              <input
+                type="text"
+                formControlName="email"
+                class="form-control"
+                placeholder="xyz@gmail.com"
+              />
+            </div>
+            <div class="form-group col-sm-10 col-xs-12 field">
+              <label>Password</label>
+              <label *ngIf="form.controls['password'].invalid && isProcessing">
+                <label *ngIf="form.controls['password'].errors['required']"
+                  >*</label
+                >
+              </label>
+              <input
+                type="password"
+                formControlName="password"
+                class="form-control"
+                placeholder="Enter password"
+              />
+            </div>
+            <div class="form-group col-sm-10 col-xs-12 field">
+              <label>Phone</label>
+              <label *ngIf="form.controls['phone'].invalid && isProcessing">
+                <label *ngIf="form.controls['phone'].errors['required']"
+                  >*</label
+                >
+              </label>
+              <input
+                type="number"
+                formControlName="phone"
+                class="form-control"
+                placeholder="Phone Number"
+              />
+            </div>
+            <button class="btn btn-danger btn-block mt-3" (click)="signup()">
+              Create Account
+            </button>
+          </form>
+          <br>
+          <a class="link" routerLink="/login"
+            >Already registered? Click to login</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

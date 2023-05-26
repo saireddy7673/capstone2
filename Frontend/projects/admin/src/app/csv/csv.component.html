@@ -1,0 +1,21 @@
+<div class="dashboard">
+  <div class="card">
+    <div class="card-header">CSV File Uploader</div>
+    <div class="card-body">
+      <h5 class="card-title">Upload Your CSV File Here</h5>
+      <div class="selectFile">
+        <form [formGroup]="form">
+          <input
+            type="file"
+            name="file"
+            id="file"
+            accept=".csv"
+            formControlName="csv"
+            (change)='onFileUpload($event)'
+          />
+        </form>
+      </div>
+      <button form="form" type="submit" class="btn btn-primary " (click)="save()">Save</button>
+    </div>
+  </div>
+</div>

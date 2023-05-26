@@ -1,0 +1,65 @@
+.register {
+  height: 100vh;
+}
+
+.register .panel {
+  width: 650px;
+  height: 525px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.link {
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  
+  color: #FFD700;
+  text-shadow: 2px 2px #ff0000;
+}
+body{
+  background-image:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(173, 171, 171,3)), url('../../assets/images/background.png');
+  
+}
+
+header {
+  background: rgb(180, 184, 208);
+  position: fixed;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+.field{
+  background-color: #ff0000;
+}
+
+@media screen and (max-width: 700px) {
+  .logo{
+    font-size: 20px;
+   }
+   header{
+    max-width: 700px;
+   }
+  #register{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    margin-left: 10px;
+  }
+  .register .panel{
+    width: 600px;
+    margin-left: 20px;
+  }
+}

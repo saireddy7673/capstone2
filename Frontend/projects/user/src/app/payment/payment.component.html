@@ -1,0 +1,58 @@
+<div class="payment">
+<h1>Payment</h1>
+<div class="form">
+    <form [formGroup]="form">
+        <div class="form-group col-md-4" id="name">
+            <label for="name">Person name</label>
+            <input required
+                type="text"
+                class="form-control"
+                formControlName="name"
+                placeholder="Enter your name"
+            /> 
+            <small  style="color: red" *ngIf="form.controls['name'].invalid && isSubmitted">
+                Name is required
+            </small>
+        </div>
+        <div class="form-group col-md-4" id="cardnumber">
+            <label for="name">Card number</label>
+            <input required
+                type="text"
+                class="form-control"
+                formControlName="cardnumber"
+                placeholder="Enter your card number"
+            /> 
+            <small  style="color: red" *ngIf="form.controls['cardnumber'].invalid && isSubmitted">
+                Card number is required
+            </small>
+        </div>
+        <div class="row md-4">
+            <div class="form-group col-md-2" id="cvv">
+                <label for="name">CVV/CVC</label>
+                <input required
+                    type="text"
+                    class="form-control"
+                    formControlName="cvv"
+                    placeholder="Enter your cvv/cvc"
+                /> 
+                <small  style="color: red" *ngIf="form.controls['cvv'].invalid && isSubmitted">
+                    CVV/CVC is required
+                </small>
+            </div>
+            <div class="form-group col-md-2" id="expiry">
+                <label for="name">Expiry</label>
+                <input required
+                    type="text"
+                    class="form-control"
+                    formControlName="expiry"
+                    placeholder="Enter your expiry date"
+                /> 
+                <small  style="color: red" *ngIf="form.controls['expiry'].invalid && isSubmitted">
+                    Expiry date is required
+                </small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" (click)="pay()">Proceed to pay</button>
+</form>
+</div>
+</div>

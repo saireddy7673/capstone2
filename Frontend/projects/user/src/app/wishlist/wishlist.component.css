@@ -1,0 +1,43 @@
+.cart {
+  min-height: 500px;
+}
+
+.cart .button {
+  margin: 20px 0;
+}
+
+.num {
+  text-transform: uppercase;
+}
+
+.cart .cart-image {
+  height: 120px;
+  width: 100%;
+}
+
+.item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.remove {
+  margin-top: 15px;
+}
+
+.empty {
+  margin-top: 50px;
+  font-size: 4rem;
+}
+
+h3{
+  text-align: center;
+}

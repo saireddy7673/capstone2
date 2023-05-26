@@ -1,0 +1,145 @@
+<!--Carousel-->
+<div
+  id="carouselExampleCaptions"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active item" data-interval="10">
+      <img src="../../assets/images/2.jpg" class="d-block" alt="..." />
+    </div>
+    <div class="carousel-item item" data-interval="10">
+      <img src="../../assets/images/Screenshot 2023-05-13 143836.png" class="d-block" alt="..." />
+    </div>
+    <div class="carousel-item item" data-interval="10">
+      <img src="../../assets/images/Screenshot 1.jpg" class="d-block" alt="..." />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<br>
+
+<h2>UPCOMING MOVIES</h2>
+
+
+
+  
+
+
+
+
+
+  <div class="container">
+    <div class="card">
+        <div class="face face1">
+            <div class="content">
+                <img src="../../assets/images/room/fast2.jpg">
+                <h3>Fast X</h3>
+            </div>
+        </div>
+        <div class="face face2">
+            <div class="content">
+                <p>telugu|tamil|english|hindi</p>
+                    <a href="https://youtu.be/0wyhc3ADSYo">Watch trailer</a>
+                   
+            </div>
+        </div>
+      </div>
+    <div class="card">
+        <div class="face face1">
+            <div class="content">
+                <img src="../../assets/images/room/gaurd2.jpg">
+                <h3>Guardians of Galaxy</h3>
+            </div>
+        </div>
+        <div class="face face2">
+            <div class="content">
+                <p>telugu|tamil|english|hindi.</p>
+                    <a href="https://youtu.be/u3V5KDHRQvk">Watch trailer</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="face face1">
+            <div class="content">
+                <img src="../../assets/images/room/adi2.jpg">
+                <h3>Adipurush</h3>
+            </div>
+        </div>
+        <div class="face face2">
+            <div class="content">
+                <p>telugu|tamil|english|hindi</p>
+                    <a href="https://youtu.be/e3ew7YUeeQc">Watch trailer</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<img
+  src="../../../assets/images/room/END.jpg"
+  width="800px"
+  height="auto"
+  style="
+    align-self: center;
+  
+    box-shadow: 10px 10px 8px #5f5b5b;
+    margin-top: 20px;
+    margin-left: 28%;
+  "
+/>
+
+
+
+<pre>  </pre>
+
+<h2>MOVIES  AVAILABLE</h2>
+<!--Images of products-->
+<!--div class="container"-->
+  <div class="row" style="padding: 70px;margin-left: 45px;">
+    <div class="col-md-6 col-lg-3 col-sm-6" *ngFor="let product of products">
+      <app-product-item [product]="product"></app-product-item>
+    </div>
+  </div>
+<!--/div-->

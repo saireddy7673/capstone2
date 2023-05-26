@@ -1,0 +1,9 @@
+<div class="dropdown">
+  <span> <i class="fa-solid fa-users-viewfinder" style="color: black;"> </i></span>
+  <div class="dropdown-content" *ngIf="userName">
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
+  </div>
+  <div class="dropdown-content" *ngIf="!userName">
+    <button class="btn btn-success" (click)="login()">Login</button>
+  </div>
+</div>

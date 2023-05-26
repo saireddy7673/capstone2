@@ -1,0 +1,122 @@
+.login {
+  height: 100vh;
+}
+
+
+.login .panel {
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  margin-left: 40vw;
+  margin-top: 35vh;
+ 
+  
+}
+
+.link {
+  margin-left: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+form {
+  margin-top: 40px;
+  margin-left: 40px;
+  
+}
+
+.field {
+  margin-bottom: 20px;
+  width: 200px;
+  
+  
+  
+}
+
+#login{
+  border: 1px solid rgb(21, 2, 2);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgb(77, 64, 64);
+  
+}
+.logo {
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  
+  color: #FFD700;
+  text-shadow: 2px 2px #ff0000;
+}
+
+header {
+  background: rgb(180, 184, 208);
+  
+ 
+  position: fixed;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  
+  
+}
+body{
+  background-image:linear-gradient(90deg,rgba(0,0,0,0.5),rgba(173, 171, 171,3)), url('../../assets/images/background.png');
+  font-family: "Raleway", sans-serif;
+  font-size: 13pt;
+  
+}
+.cont{
+  background-color: #f8f8f7;
+}
+button{
+  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #1309e1;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 20px;
+  transition: 0.25s;
+  width: 153px;
+  margin-left: 20px;
+}
+button:hover {
+  box-shadow: 0px 1px 18px #0d0d0d;
+}
+
+
+
+
+
+/*Adding responsivness*/
+@media screen and (max-width: 700px) {
+ .logo{
+  font-size: 20px;
+ }
+ header{
+  max-width: 700px;
+ }
+ #login{
+  position: absolute;
+  left: 0px;
+  border-radius: 25px;
+}
+.login .panel{
+  width: 80%;
+  margin-left: 10vw;
+  
+}
+}
+

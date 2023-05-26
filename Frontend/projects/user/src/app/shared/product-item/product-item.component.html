@@ -1,0 +1,47 @@
+<ng-container *ngIf="product">
+  <div class="item" >
+    <div class="card" >
+      <img
+        class="card-img-top"
+        src="{{ product.image }}"
+        alt="{{ product.name }}"
+        [routerLink]="'/products/' + product.id"
+      />
+      <div class="card-body" >
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text"></p>
+
+        <p>
+          <strong>Language:</strong> {{ product.description }}
+        </p>
+
+        <p *ngIf="product.countInStock > 0">
+          <strong>Tickets Left:</strong> {{ product.countInStock }}
+        </p>
+        <p *ngIf="product.countInStock <= 0" style="color: red">TICKETS SOLDOUT</p>
+
+       <p>
+          <strong>Price:</strong> {{ product.price | currency: "INR":"symbol" }}
+        </p>
+        
+        
+        <hr>
+        <button class="btn btn-info" (click)="addToWishlist()">
+          WISHLIST
+        </button>
+        <button
+          class="btn btn-dark"
+          (click)="addToCart()"
+          [disabled]="product.countInStock <= 0"
+        >
+          BUY NOW
+        </button>
+     
+      </div>
+   
+    </div>
+  
+  </div>
+  
+</ng-container>
+

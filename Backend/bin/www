@@ -1,0 +1,7 @@
+//creating the server using listen 
+
+const server = require('../app')
+const _port = process.env.Port || 3000
+server.listen(_port,()=>{
+    console.log(`server started and running at ${_port} `);
+})

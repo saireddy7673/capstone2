@@ -1,0 +1,62 @@
+.login-register {
+  height: 70vh;
+}
+
+.login-register .panel {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  margin-left: 30vw;
+  margin-top: 20vh;
+ 
+
+
+  
+  
+}
+
+.link {
+  margin-left: 130px;
+  text-decoration: none;
+  color: black;
+}
+.btn1 {
+  width: 25%;
+  margin-left: 120px;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+form {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+#login{
+  border: 1px solid rgb(21, 2, 2);
+  padding: 10px;
+  border-radius: 0px;
+  box-shadow: 10px 10px 15px rgb(77, 64, 64);
+}
+
+body{
+  background-image:linear-gradient(90deg,rgba(244, 237, 237, 0.5),rgba(173, 171, 171,3)), url('../../assets/images/background.png');
+  height: 100vh;
+}
+
+
+/*Adding responsivness*/
+@media screen and (max-width: 700px) {
+  #login{
+    position: absolute;
+    left: 0px;
+  }
+  
+}

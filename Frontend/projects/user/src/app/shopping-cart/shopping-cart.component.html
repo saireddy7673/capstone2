@@ -1,0 +1,180 @@
+<div class="container">
+  <div class="cart">
+
+
+
+ 
+
+
+
+    <div class="row">
+      <div class="col-md-12 col-lg-8">
+        <div class="button">
+          <button class="btn btn-primary" (click)="back()">
+            <i class="fa-solid fa-left-long"></i>
+            Contiune Booking tickets
+          </button>
+        </div>
+        <div class="num">
+          <h3></h3>
+        </div>
+        <div class="empty" *ngIf="cartItems.length <= 0">
+          
+        </div>
+          <div class="row item" *ngFor="let item of cartItems">
+            <div class="col-md-2">
+              <img
+                class="cart-image"
+                [src]="item.product.image"
+                [attr.alt]="item.product.name"
+              />
+            </div>
+            <div class="col-md-7">
+              <div class="name">{{ item.product.name }}</div>
+              <div class="price">Ticket Price :
+               {{ item.product.price | currency: "INR" }}
+              
+              </div>
+              <div class="remove">
+                <button class="btn btn-danger">
+                  <i class="fa-solid fa-trash" (click)="delete(item)"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="quantity">
+                <label for="quatity">Quantity:</label><br />
+                
+               <input
+                  type="number"
+                  [(ngModel)]="item.quantity"
+                  id="quantity"
+                  min="0"
+                  max="100"
+                  placeholder="Enter the quantity"
+                  (change)="updateQuantity($event, item)"
+                /> 
+                 .<div class="d">
+                <!-- <input type="date"> -->
+            
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+</div> 
+
+              </div>
+              <div class="subtotal">
+                Subtotal:
+                <span class="value">{{
+                  item.product.price * item.quantity | currency: "INR"
+                }}</span>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+      <div class="col-lg-4 col-md-12">
+        <div class="summary">
+          <h2>Order Summary</h2>
+          <div class="summary-price">
+            <span>Items Price</span>
+            <span>{{ itemPrice | currency: "INR" }}</span>
+          </div>
+          <div class="summary-price">
+            <span>Platfrom charges</span>
+            <span class="free">Free</span>
+          </div>
+          <div class="checkout">
+            <div class="summary-price">
+              <span>Total Price</span>
+              <span>{{ totalPrice | currency: "INR" }}</span>
+            </div>
+            <div class="form"></div>
+            <form [formGroup]="form">
+                <div class="form-group col-md-6" id="coupon">
+                <label for="name">Apply Coupon</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    formControlName="coupon"
+                    placeholder="Enter the coupon to apply discount"
+                /> <br><button type="submit" class="btn btn-success btn1" (click)="coupenApply()">apply coupon</button>
+                <br> <br>
+                </div>
+            </form>
+            <div>
+              <button class="btn btn-success" (click)="onCheckout()">
+                procced
+              </button>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+      
+ 
+
+
+<div class="radio-input">
+ <h3> Select Show Timeings   :</h3><pre>
+
+  </pre>
+  <input type="radio" id="value-1" name="value-radio" value="value-1">
+  <label for="value-1">11:20 AM</label>
+  <input type="radio" id="value-2" name="value-radio" value="value-2">
+  <label for="value-2">2:30 PM</label>
+  <input type="radio" id="value-3" name="value-radio" value="value-3">
+  <label for="value-3">6:30 PM</label>
+  <input type="radio" id="value-4" name="value-radio" value="value-4">
+  <label for="value-4">9:30 PM</label>
+
+<input type="date" id="date"  style="background-color:#f3ecec;border-radius: 5px;">
+</div>
+
+
+
+
+
+
+
+  
+      
+  
+

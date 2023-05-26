@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header">Manage Coupons</div>
+    <div class="card-body">
+      <h5 class="card-title">{{editMode ? "Edit Coupon" : "Add Coupon"}}</h5>
+      <button class="btn btn-primary" (click)="onSubmit()">
+        <i class="fa-solid fa-plus"></i>{{editMode ? "Update" : "Add"}}
+      </button>
+      <a class="btn btn-secondary" routerLink="form" (click)="cancel()">Cancel</a>
+    </div>
+    <div class="form">
+      <form [formGroup]="form">
+        <div class="form-row row">
+          <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="coupen"
+              formControlName="coupen"
+              placeholder="Name of coupon"
+            />
+            <small
+              *ngIf="form.controls['coupen'].invalid && isSubmitted"
+              style="color: red"
+              >Name is required</small
+            >
+          </div>
+          <div class="form-group col-md-6">
+            <label for="discount">Discount</label>
+            <input
+              type="text"
+              class="form-control"
+              id="discountpercent"
+              formControlName="discountpercent"
+              placeholder="Discount on coupon"
+            />
+            <small
+              *ngIf="form.controls['discountpercent'].invalid && isSubmitted"
+              style="color: red"
+              >Discount is required</small
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+  

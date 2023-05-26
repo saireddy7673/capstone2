@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-header">Manage Coupons</div>
+    <div class="card-body">
+      <h5 class="card-title">Coupons</h5>
+      <a class="btn btn-success" routerLink="form"
+        ><i class="fa-solid fa-plus"></i>New</a
+      >
+    </div>
+    <div class="coupon-table table-responsive">
+        <table class="table table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Name of the coupon</th>
+              <th scope="col">Discount(%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let coupon of coupons">
+              <td> {{coupon.coupen}} </td>
+              <td> {{coupon.discountpercent}} </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  

@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header">Manage Theatre  & Shows</div>
+  <div class="card-body">
+    <h5 class="card-title">{{editMode ? "Edit Category" : "Add Theatre & Shows"}}</h5>
+    <button class="btn btn-primary" (click)="onSubmit()">
+      <i class="fa-solid fa-plus"></i>{{editMode ? "Update" : "Add"}}
+    </button>
+    <a class="btn btn-secondary" routerLink="form" (click)="cancel()">Cancel</a>
+  </div>
+  <div class="form">
+    <form [formGroup]="form">
+      <div class="form-row row">
+        <div class="form-group col-md-6">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+            placeholder="Name of Theatre & Shows available"
+          />
+          <small
+            *ngIf="form.controls['name'].invalid && isSubmitted"
+            style="color: red"
+            >Name is required</small
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
